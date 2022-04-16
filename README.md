@@ -12,7 +12,7 @@
 >
 > If you use the **TMRCA.py** in your research work, please cite at least one of the following paper(s):
 >
-> - 
+> - Ancient natural selection on *ACE2* contributes to the genetic susceptibility of COVID-19
 
 
 
@@ -34,7 +34,7 @@ $ python2 TMRCA.py -h
 >
 > **--region**: bed file, one region indicated in each line. 3 columns: `chr` `start` `end` . no header line, tab or space delimited, additional columns will be ignored. chromosome ID(s) should be coded in the same way as those in the VCF file (i.e., "1" is different from "chr1")
 >
-> **--ape**: difference between human and chimpanzee (or any other outgroup) genome. each line indicates a genetic position with different alleles between human genome and chimpanzee genome. 2 columns: `chr` `pos` , additional columns will be ignored, no header, tab or space delimited. one file for one chromosome. chromosome ID should be replaced by "@" in the command line (i.e., --ape chr@.txt). get all the files prepared under same folder.
+> **--ape**: difference between human and chimpanzee (or any other outgroup) genome. each line indicates a genetic position with allele difference between human genome and chimpanzee genome. 2 columns: `chr` `pos` , additional columns will be ignored, no header, tab or space delimited. the filename pattern should contain a '@' where the chromosome number would go (e.g., --ape chr@.txt). get all the files prepared under same folder. the program will then find all the files by replacing "@" with the chromosome IDs in your input files. 
 >
 > **`optional`**
 >
