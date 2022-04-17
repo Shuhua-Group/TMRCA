@@ -1,29 +1,23 @@
-> **TMRCA.py**
+> **TMRCA**
 >
 > https://github.com/Shuhua-Group/TMRCA
 >
-> For calculation of within-population TMRCA & cross-population divergence time
+> For calculation of within-population TMRCA & cross-population divergence time, requiring phased VCF as input. Missing genotype (i.e., ".|.") is acceptable. 
 >
-> developed in python2.7, at your own risk if you use python3
+> If you use the **TMRCA** in your research work, please cite at least one of the following paper(s):
 >
-> require phased VCF as input, accept missing geno (i.e., ".|.")
->
-> 
->
-> If you use the **TMRCA.py** in your research work, please cite at least one of the following paper(s):
->
-> - Ancient natural selection on *ACE2* contributes to the genetic susceptibility of COVID-19
+> - 
 
 
 
-**Simple run: **
+**Simple run:**
 
 ``` bash
 ## to calculate TMRCA using all samples in the input file at the given region(s)
-$ python2 TMRCA.py --gzvcf input.vcf.gz --region region.txt --ape Human_panTro5.chr@.diff.txt.gz
+$ ./TMRCA --gzvcf input.vcf.gz --region region.txt --ape Human_panTro5.chr@.diff.txt.gz
 
 ## to get help
-$ python2 TMRCA.py -h
+$ ./TMRCA -h
 ```
 
 **Inputs:**
@@ -34,7 +28,7 @@ $ python2 TMRCA.py -h
 >
 > **--region**: bed file, one region indicated in each line. 3 columns: `chr` `start` `end` . no header line, tab or space delimited, additional columns will be ignored. chromosome ID(s) should be coded in the same way as those in the VCF file (i.e., "1" is different from "chr1")
 >
-> **--ape**: difference between human and chimpanzee (or any other outgroup) genome. each line indicates a genetic position with allele difference between human genome and chimpanzee genome. 2 columns: `chr` `pos` , additional columns will be ignored, no header, tab or space delimited. the filename pattern should contain a '@' where the chromosome number would go (e.g., --ape chr@.txt). get all the files prepared under same folder. the program will then find all the files by replacing "@" with the chromosome IDs in your input files. 
+> **--ape**: difference between human and chimpanzee (or any other outgroup) genome. each line indicates a genetic position with allele difference between human genome and chimpanzee genome. 2 columns: `chr` `pos` , additional columns will be ignored, no header, tab or space delimited. the filename pattern should contain a '@' where the chromosome number would go (e.g., --ape chr@.txt). get all the files prepared under the same folder. the program will then find all the files by replacing "@" with the chromosome IDs in your input files. 
 >
 > **`optional`**
 >
@@ -48,7 +42,11 @@ $ python2 TMRCA.py -h
 >
 > **--out**: output file prefix. **default**: out . 
 
+**Notes:**
 
+This program is compiled in centos7, older systems may not be supported. 
+
+If you have problem using the compiled program, it can still be run in the following way: `python2 TMRCA.py2.py [--options]`; OR `python3 TMRCA.py3.py [--options]`. All the required packages are accessible in conda.
 
 ---
 
