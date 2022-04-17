@@ -46,7 +46,7 @@ $ ./TMRCA -h
 
 This program is compiled in centos7, older systems may not be supported. 
 
-If you have problem using the compiled program, it can still be run in the following way: `python2 TMRCA.py2.py [--options]`; OR `python3 TMRCA.py3.py [--options]`. All the required packages are accessible in conda.
+If you have any problem using the compiled program, you can use the other 2 scripts in the following way: `python2 TMRCA.py2.py [--options]`; OR `python3 TMRCA.py3.py [--options]`. 
 
 ---
 
