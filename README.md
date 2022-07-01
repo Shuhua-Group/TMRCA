@@ -6,7 +6,7 @@
 >
 > If you use the **TMRCA** in your research work, please cite at least one of the following paper(s):
 >
-> - 
+> - [Lineage-specific positive selection on *ACE2* contributes to the genetic susceptibility of COVID-19](https://academic.oup.com/nsr/advance-article/doi/10.1093/nsr/nwac118/6623880) (*National Science Review*, 2022)
 
 
 
